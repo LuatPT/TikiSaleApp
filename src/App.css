@@ -36,3 +36,135 @@
     transform: rotate(360deg);
   }
 }
+
+/* Item List */
+.deal-item {
+  margin-bottom: 20px;
+  padding: 16px;
+  color: #242424;
+  display: inline-block;
+  width: 25%;
+  text-decoration: none;
+  background-color: transparent;
+}
+.deal-item .image{
+  padding-top: 0;
+  text-align: center;
+  position: relative;
+  min-height: 200px;
+}
+.discount-badge{
+  
+}
+.deal-item .image .discount-badge{
+  width: 40px;
+  height: 36px;
+  background-image: url("https://salt.tikicdn.com/desktop/img/deal/price-tag-v2.png");
+  background-size: contain;
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  padding: 0;
+  line-height: 31px;
+  font-weight: 500;
+  z-index: 1;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+}
+.deal-item .image .tikicon{
+  display: none;
+  background-image: url("https://salt.tikicdn.com/desktop/img/sprite.png?v=1519811185467");
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-position: -394px -22px;
+  width: 47px;
+  height: 20px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.lazy{
+  display: inline;
+  border:0 ;
+  vertical-align: middle;
+}
+.title{
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.54;
+  color: #242424;
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  width: 200px;
+}
+
+.body.badge-v2 .deal-item .title .icon-tikinow {
+  position: relative;
+  display: inline-block;
+  width: 53px;
+  height: 15px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  background-image: url("https://salt.tikicdn.com/desktop/img/tiki-now-15.png");
+  background-size: 53px 15px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.deal-status{
+  color: #000;
+  margin-top: 11px;
+  font-weight: 300;
+  width: 111px;
+  display: flex;
+}
+.process-bar{
+  display: block;
+  width: 200px;
+  height: 18px;
+  background: #FDDAC8;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0;
+  position: relative;
+}
+.deal-status .process-bar div {
+  min-width: 2px;
+  background: #FD6E23;
+  height: 100%;
+}
+.deal-item .deal-status .process-bar .text {
+  font-size: 12px;
+  position: absolute;
+  color: #fff;
+  top: 2px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.price-sale{
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #242424;
+  font-weight: 500;
+  padding: 0;
+  display: flex;
+}
+
+.price-regular{
+  font-size: 11px;
+  color: #a2a2a2;
+  text-decoration: line-through;
+  text-align: left;
+  font-weight: 300;
+  margin-left: 8px;
+}

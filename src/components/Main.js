@@ -3,7 +3,7 @@ import CategoryContainer from '../containers/CategoryContainer'
 import ListContainer from '../containers/ListContainer'
 const Main = () => {
   return (
-    <div className="container divMain">
+    <div className="container divMain row">
       <CategoryContainer />
       <ListContainer />
     </div>
