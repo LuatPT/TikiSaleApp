@@ -36,7 +36,33 @@
     transform: rotate(360deg);
   }
 }
-
+/* Pagi */
+.divPagi{
+  display: flex;
+  justify-content: center;
+}
+.pagination{
+  border: none;
+}
+.active{
+  background-color: #189eff;
+}
+.page-item{
+  width: 40px;
+  text-align: center;
+  /* border: 0.5px solid gray; */
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.page-item:hover{
+  background-color: #9cb0c6;
+}
+/* header */
+.inputSearch{
+  margin: 3%;
+  width: 600px;
+}
 /* Item List */
 .deal-item {
   margin-bottom: 20px;

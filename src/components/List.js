@@ -3,17 +3,21 @@ import ListItem from './ListItem'
 class List extends React.Component {
   componentDidMount = () => {
     const { ListAction } = this.props;
-    ListAction.getDataAction();
+    ListAction.getDataAction({
+      categoryId: 0,
+      pageNum: 1
+    });
   }
   render() {
-    const { list } = this.props;
-    console.log(list)
-    if (list) {
+    const { listData } = this.props;
+    // console.log(list)
+    if (listData) {
       return (
         <div className="col-md-9" >
+
           < div className="divList row " >
             {
-              list.map((ele, key) => (
+              listData.map((ele, key) => (
                 < ListItem
                   key={key}
                   {...ele}
