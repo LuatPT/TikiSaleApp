@@ -6,7 +6,6 @@ const initParameter = {
 const filter = (state = initParameter, action) => {
   switch (action.type) {
     case 'FILTER_CATEGORY':
-      console.log("nguuuuuu")
       let arr = addParamRequest(action.item)
       let states = {
         categoryId: arr.join("%2C"),

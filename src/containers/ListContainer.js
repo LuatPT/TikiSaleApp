@@ -3,7 +3,9 @@ import * as ListAction from '../actions'
 import { bindActionCreators } from "redux"
 import List from "../components/List"
 const mapStateToProps = state => ({
-  listData: state.listReducer.list
+  listData: state.listReducer.list,
+  timeCountDown: state.getCountDownTime,
+  keySearch: state.searchReducer
 })
 const mapDispatchToProps = dispatch => ({
   ListAction: bindActionCreators(ListAction, dispatch)

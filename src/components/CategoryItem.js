@@ -1,30 +1,28 @@
 import React from 'react'
 class CategoryItem extends React.Component {
   onChangeCate = (item) => {
-    console.log(item)
     const { CateAction } = this.props;
     CateAction.filterCategory(item);
+    CateAction.changeCategory(item.id);
   }
   componentDidUpdate() {
     const { params, CateAction } = this.props;
-    console.log(params)
     CateAction.getDataAction(params);
   }
   render() {
     const { listCategory } = this.props;
     return (
-      <div>
+      <div className=" navbar-nav ulCate col-md-3 ">
         {
           listCategory.map((ele, key) => (
-            < li key={key} >
-              <input type="checkbox"
-                className="checkBox"
-                value={ele.id}
+            < label key={key} className="container1">
+              <input type="checkbox" className="checkBox" checked={ele.status} value={ele.id}
                 onChange={() => this.onChangeCate(ele)}
               />
-              {ele.name}
-            </li>
+              <span className="itemCategoryName">{ele.name}</span>
+            </label>
           ))
+
         }
       </div>
     )

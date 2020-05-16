@@ -4,7 +4,7 @@ class Paginate extends React.Component {
   onClickPageNum(pNum) {
     const { PagiAction, listIdCate, pageNum } = this.props;
     PagiAction.changePagination(pNum);
-    console.log(pageNum)
+    console.log(listIdCate)
     PagiAction.getDataAction({
       categoryId: listIdCate,
       pageNum: pageNum
@@ -12,7 +12,6 @@ class Paginate extends React.Component {
   }
   render() {
     const { total, pageNum } = this.props;
-    console.log("render" + pageNum)
     return (
       <div className="divPagi" >
         <div>
@@ -22,7 +21,7 @@ class Paginate extends React.Component {
             activePage={pageNum}
             itemsCountPerPage={20}
             totalItemsCount={total}
-            onChange={() => this.onClickPageNum(pageNum)}
+            onChange={this.onClickPageNum.bind(this)}
           />
         </div>
       </div>

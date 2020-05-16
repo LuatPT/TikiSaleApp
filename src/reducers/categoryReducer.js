@@ -79,8 +79,8 @@ const dataCate = [
 const categoryReducer = (state = dataCate, action) => {
   // console.log(state)
   switch (action.type) {
-    case 'GET_DATA':
-      return state
+    case 'CHANGE_CATEGORY':
+      return state.map(ele => ele.id === action.idCate ? { ...ele, status: !ele.status } : ele)
     default:
       return state
   }

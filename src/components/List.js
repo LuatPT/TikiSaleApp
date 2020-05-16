@@ -9,18 +9,21 @@ class List extends React.Component {
     });
   }
   render() {
-    const { listData } = this.props;
-    // console.log(list)
-    if (listData) {
-      return (
-        <div className="col-md-9" >
+    const { listData, timeCountDown, keySearch, ListAction } = this.props;
 
+    console.log(keySearch)
+    if (listData) {
+      var arr = listData.filter(element => element.product.name.toLowerCase().includes(keySearch.toLowerCase()))
+      return (
+        <div className="col-md-9 divAllList" >
           < div className="divList row " >
             {
-              listData.map((ele, key) => (
+              arr.map((ele, key) => (
                 < ListItem
                   key={key}
                   {...ele}
+                  timeCountDown={timeCountDown}
+                  itemAction={ListAction}
                 />
               ))
             }

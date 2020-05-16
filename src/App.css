@@ -36,8 +36,12 @@
     transform: rotate(360deg);
   }
 }
+#root{
+  background-color: #efefef;
+}
 /* Pagi */
 .divPagi{
+  margin: 2%;
   display: flex;
   justify-content: center;
 }
@@ -58,12 +62,43 @@
 .page-item:hover{
   background-color: #9cb0c6;
 }
+/* Main */
+.divMain{
+ display: flex;
+ justify-content: center;
+}
+.divListCate{
+  background-color: #ffffff;
+  border: gray 0.5px solid;
+}
 /* header */
+.divSearch{
+  background-color: #189eff;
+}
 .inputSearch{
   margin: 3%;
   width: 600px;
 }
+/* Category */
+.itemCategoryName{
+  font-weight: 20px;
+  font-size: medium;
+}
 /* Item List */
+.divAllList{
+  padding: 1%;
+}
+.divItem{
+  border: none;
+}
+.divItem:hover {
+  border: 1.5px #f4f4f4 solid ;
+}
+.productItemName{
+  display: flex;
+  width: 120px;
+  flex-wrap: wrap;
+}
 .deal-item {
   margin-bottom: 20px;
   padding: 16px;
@@ -148,12 +183,12 @@
   color: #000;
   margin-top: 11px;
   font-weight: 300;
-  width: 111px;
+  width: 170px;
   display: flex;
 }
 .process-bar{
   display: block;
-  width: 200px;
+  width: 100px;
   height: 18px;
   background: #FDDAC8;
   overflow: hidden;
@@ -194,3 +229,12 @@
   font-weight: 300;
   margin-left: 8px;
 }
+
+.countdown{
+  font-weight: 300;
+  font-size: 12px;
+  white-space: nowrap;
+  line-height: 18px;
+}
+
+/* Custom checkbox */
